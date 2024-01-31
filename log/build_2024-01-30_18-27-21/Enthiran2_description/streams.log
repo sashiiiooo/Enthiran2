@@ -1,0 +1,24 @@
+[0.751s] Invoking command in '/home/hash/Enthiran2_description': PYTHONPATH=/home/hash/Enthiran2_description/build/Enthiran2_description/prefix_override:/home/hash/Enthiran2_description/install/Enthiran2_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Enthiran2_description build --build-base /home/hash/Enthiran2_description/build/Enthiran2_description/build install --record /home/hash/Enthiran2_description/build/Enthiran2_description/install.log --install-scripts $base/lib/Enthiran2_description --single-version-externally-managed
+[0.959s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.959s]   warnings.warn(
+[0.967s] running egg_info
+[0.968s] writing build/Enthiran2_description/Enthiran2_description.egg-info/PKG-INFO
+[0.968s] writing dependency_links to build/Enthiran2_description/Enthiran2_description.egg-info/dependency_links.txt
+[0.969s] writing entry points to build/Enthiran2_description/Enthiran2_description.egg-info/entry_points.txt
+[0.969s] writing requirements to build/Enthiran2_description/Enthiran2_description.egg-info/requires.txt
+[0.969s] writing top-level names to build/Enthiran2_description/Enthiran2_description.egg-info/top_level.txt
+[0.970s] reading manifest file 'build/Enthiran2_description/Enthiran2_description.egg-info/SOURCES.txt'
+[0.977s] writing manifest file 'build/Enthiran2_description/Enthiran2_description.egg-info/SOURCES.txt'
+[0.977s] running build
+[0.977s] running build_py
+[0.977s] running install
+[0.978s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.978s]   warnings.warn(
+[0.978s] running install_lib
+[0.979s] running install_data
+[0.980s] running install_egg_info
+[0.982s] removing '/home/hash/Enthiran2_description/install/Enthiran2_description/lib/python3.10/site-packages/Enthiran2_description-0.0.0-py3.10.egg-info' (and everything under it)
+[0.982s] Copying build/Enthiran2_description/Enthiran2_description.egg-info to /home/hash/Enthiran2_description/install/Enthiran2_description/lib/python3.10/site-packages/Enthiran2_description-0.0.0-py3.10.egg-info
+[0.984s] running install_scripts
+[1.005s] writing list of installed files to '/home/hash/Enthiran2_description/build/Enthiran2_description/install.log'
+[1.034s] Invoked command in '/home/hash/Enthiran2_description' returned '0': PYTHONPATH=/home/hash/Enthiran2_description/build/Enthiran2_description/prefix_override:/home/hash/Enthiran2_description/install/Enthiran2_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/Enthiran2_description build --build-base /home/hash/Enthiran2_description/build/Enthiran2_description/build install --record /home/hash/Enthiran2_description/build/Enthiran2_description/install.log --install-scripts $base/lib/Enthiran2_description --single-version-externally-managed

@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="Enthiran2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Enthiran2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Enthiran2_description)/urdf/Enthiran2.trans" />
+<xacro:include filename="$(find Enthiran2_description)/urdf/Enthiran2.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.2249073499643295e-13 0.00019115440648833078 0.034129777019820354" rpy="0 0 0"/>
+    <mass value="5.805608278992979"/>
+    <inertia ixx="0.011921" iyy="0.005851" izz="0.015343" ixy="-0.0" iyz="-3.4e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-0.010000000000000002 0.0 -3.469446951953614e-18" rpy="0 0 0"/>
+    <mass value="0.44390704195223785"/>
+    <inertia ixx="0.0002" iyy="0.000115" izz="0.000115" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.055 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.055 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="0.010000000000000002 0.0 -3.469446951953614e-18" rpy="0 0 0"/>
+    <mass value="0.44390704195223785"/>
+    <inertia ixx="0.0002" iyy="0.000115" izz="0.000115" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.055 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.055 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="2.412509625050848e-18 0.0 0.0075001518940361195" rpy="0 0 0"/>
+    <mass value="0.057800396087530896"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="5e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.045 -0.070001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.045 -0.070001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Enthiran2_description)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="continuous">
+  <origin xyz="-0.055 0.0 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="0.055 0.0 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.0 0.045 0.070001" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
